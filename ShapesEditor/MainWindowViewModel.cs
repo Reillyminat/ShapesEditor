@@ -345,22 +345,6 @@ namespace ShapesEditor
             BorderWidth = width;
             BorderHeight = height;
         }
-        private void ApplyDragSelectionRect()
-        {
-            BorderVisible = false;
-            Rect dragRect = new Rect(BorderLeftOffset, BorderTopOffset, BorderWidth, BorderHeight);
-            dragRect.Inflate(BorderWidth / 10, BorderHeight / 10);
-            SelectedShapes.Clear();
-            //HitTestResult hitTestResult=VisualTreeHelper.HitTest(dragRect,)
-            //foreach (var shape in Shapes)
-            //{
-            //    Rect itemRect = new Rect(shape.CanvasLeftOffset, shape.CanvasTopOffset, shape., rectangleViewModel.Height);
-            //    if (dragRect.Contains(itemRect))
-            //    {
-            //        listBox.SelectedItems.Add(rectangleViewModel);
-            //    }
-            //}
-        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged(string propertyName)
